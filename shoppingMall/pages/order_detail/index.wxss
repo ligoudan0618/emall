@@ -1,0 +1,68 @@
+.order-content {
+  padding: 20rpx;
+}
+.order-content .order-detail {
+  border: 2rpx solid #eee;
+  border-radius: 15rpx;
+  box-shadow: 1rpx 1rpx 2rpx rgba(0, 0, 0, 0.1);
+  padding: 20rpx 10rpx;
+}
+.order-content .order-detail .order-item {
+  display: flex;
+  border-bottom: 2rpx solid #eee;
+  margin-bottom: 10rpx;
+  padding: 10rpx;
+}
+.order-content .order-detail .order-item image {
+  width: 20%;
+}
+.order-content .order-detail .order-item navigator {
+  padding: 10rpx;
+  border: 2rpx solid transparent;
+  border-radius: 15rpx;
+  color: #fff;
+  font-weight: 700;
+  background: #ec5d32;
+  align-self: center;
+}
+.order-content .order-detail .order-item .product-info {
+  flex: 1;
+  padding-left: 15rpx;
+  align-self: center;
+}
+.order-content .order-detail .order-item .product-num {
+  flex: 0.5;
+  align-self: center;
+}
+.order-content .order-detail .order-info {
+  margin-top: 150rpx;
+}
+.order-content .order-detail .order-info .order-num-wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+.order-content .order-detail .order-info .order-time-wrap {
+  margin-top: 10rpx;
+  justify-content: space-between;
+  display: flex;
+}
+.order-content .order-detail .order-info .order-pay {
+  justify-content: flex-end;
+  display: flex;
+  margin-top: 30rpx;
+}
+.order-content .order-detail .order-info .order-pay .cancel-order {
+  font-size: 20rpx;
+  padding-right: 10rpx;
+  padding-top: 10rpx;
+}
+.order-content .order-detail .order-info .order-pay button {
+  margin-right: 20rpx;
+  background: #ec5d32;
+}
+.order-content .order-detail .order-info .order-pay view {
+  margin-top: 20rpx;
+  margin-right: 10rpx;
+  font-size: 28rpx;
+}

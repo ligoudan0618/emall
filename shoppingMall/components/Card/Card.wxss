@@ -1,0 +1,8 @@
+.card .title {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.card {
+  border: 2rpx solid #eee;
+}

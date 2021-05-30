@@ -1,0 +1,44 @@
+.product-info-wrap {
+  display: flex;
+  padding: 30rpx;
+}
+.product-info-wrap image {
+  width: 30%;
+}
+.product-info-wrap .product-info {
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+}
+.product-info-wrap .product-info .product-name {
+  color: #666;
+  font-size: 32rpx;
+}
+.product-info-wrap .product-info .product-description {
+  font-size: 26rpx;
+}
+.review-form {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.review-form textarea {
+  padding: 10rpx;
+  border: 1rpx solid #eee;
+  border-radius: 15rpx;
+}
+.review-form .review-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.review-form .review-button button {
+  margin-right: 10rpx;
+}
+.review-form .review-button button:nth-child(1) {
+  background-color: red;
+}
+.weui-uploader {
+  max-width: 624rpx !important;
+  overflow: hidden;
+}

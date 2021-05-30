@@ -1,0 +1,81 @@
+page {
+  padding-bottom: 90rpx;
+}
+.index_swiper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 300rpx;
+}
+.index_swiper swiper {
+  width: 100%;
+  height: 100%;
+}
+.index_swiper swiper image {
+  width: 100%;
+}
+.emall_index {
+  padding: 0 50rpx 0 50rpx;
+}
+.index-product-list {
+  margin-top: 25rpx;
+}
+.index-product-list .product-list {
+  margin-top: 20rpx;
+}
+.index-product-list .product-list .product-title {
+  display: flex;
+  justify-content: center;
+}
+.index-product-list .product-list .product-group {
+  margin-top: 15rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.index-product-list .product-list .product-group .product-list-item {
+  width: 315rpx;
+  height: 400rpx;
+  border: 2rpx solid #eee;
+  border-radius: 10rpx;
+  box-shadow: 2rpx 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.index-product-list .product-list .product-group .product-list-item .product-img {
+  overflow: hidden;
+  height: 50%;
+}
+.index-product-list .product-list .product-group .product-list-item .product-img image {
+  width: 100%;
+  height: 200rpx;
+}
+.index-product-list .product-list .product-group .product-list-item .product-name {
+  color: #878c8a;
+  margin-left: 15rpx;
+  margin-top: 25rpx;
+}
+.index-product-list .product-list .product-group .product-list-item .product-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  margin-top: 15rpx;
+}
+.index-product-list .product-list .product-group .product-list-item .product-price .left .icon-renmingbi {
+  width: 32rpx;
+  height: 32rpx;
+  color: #bdb069;
+  margin-top: -45rpx !important;
+}
+.index-product-list .product-list .product-group .product-list-item .product-price .icon-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32rpx;
+  height: 32rpx;
+  background: #eee488;
+  border-radius: 50%;
+}
+.index-product-list .product-list .product-group .product-list-item:nth-child(even) {
+  margin-left: 20rpx;
+}

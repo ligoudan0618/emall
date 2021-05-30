@@ -1,0 +1,12 @@
+<mp-cells title="个人中心">
+    <mp-cell link url='/pages/address/index' value='收货地址管理'>
+        <image slot="icon" src="../../icons/category.png"
+            style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;">
+        </image>
+    </mp-cell>
+    <mp-cell link url='/pages/change_password/index' value='修改密码'>
+        <image slot="icon" src="../../icons/my.png"
+            style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;">
+        </image>
+    </mp-cell>
+</mp-cells>

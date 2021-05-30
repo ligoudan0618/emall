@@ -1,0 +1,8 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="page">
+    <view class="page__hd">
+    </view>
+    <view class="page__bd">
+        <mp-searchbar bindselectresult="selectResult" focus search="{{search}}"></mp-searchbar>
+    </view>
+</view>

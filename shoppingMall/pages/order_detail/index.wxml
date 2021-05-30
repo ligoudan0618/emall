@@ -1,0 +1,49 @@
+<view class="order-content">
+    <view class="order-detail" wx:for='{{orderDetail}}' wx:for-item='item1' wx:key='*this'>
+        <view>收货地址：{{item1.consigneeAddress}}</view>
+        <view class="order-item" wx:for='{{item1.products}}' wx:for-item='item2' wx:key='*this'>
+            <image src="{{item2.productId.image}}" mode="widthFix" />
+            <view class="product-info">
+                <view class="product-name">
+                    {{item2.productId.name}}
+                </view>
+                <view class="product-price">￥{{item2.productPrice}}</view>
+            </view>
+            <view class="product-num">X{{item2.productNum}}</view>
+            <block wx:if="{{item1.isDelivered}}">
+                <navigator wx:if='{{item1.isDelivered&&!item2.isReview}}'
+                    url='/pages/review_submit/index?productId={{item2.productId._id}}&orderNum={{item1.orderNum}}'>
+                    评论</navigator>
+                <navigator wx:else
+                    url='/pages/review_submit/index?productId={{item2.productId._id}}&isReview=true&reviewId={{item2.reviewId}}'>
+                    去追评</navigator>
+            </block>
+        </view>
+        <view class="order-info">
+            <view class="order-num-wrap">
+                <view>订单编号</view>
+                <view class="order-num">{{item1.orderNum}}</view>
+            </view>
+            <view class="order-time-wrap">
+                <view>下单时间</view>
+                <view class="order-create-time">{{item1.createTime}}</view>
+            </view>
+            <view class="order-time-wrap">
+                <view>总价</view>
+                <view class="order-create-time">￥{{item1.orderPrice}}</view>
+            </view>
+            <view wx:if="{{item1.delivery&&!item1.isDelivered}}">已发货</view>
+            <view wx:if="{{item1.isPay&&!item1.delivery}}">未发货
+                <button size="mini" bindtap="handleChangeAddress">修改收货地址</button>
+            </view>
+            <view class="order-pay">
+                <view class="cancel-order" bindtap='handleCancelOrder' wx:if='{{!item1.isPay||!item1.isDelivered}}'>取消订单
+                </view>
+                <button size='mini' wx:if='{{!item1.isPay}}' bindtap='handlePay'>付款</button>
+                <view wx:else>{{item1.isDelivered ? '已收货':'已付款'}}</view>
+                <button size='mini' wx:if='{{item1.delivery&&!item1.isDelivered}}'
+                    bindtap='handleDelivered'>确认收货</button>
+            </view>
+        </view>
+    </view>
+</view>

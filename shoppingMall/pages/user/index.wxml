@@ -1,0 +1,55 @@
+<view class="user-content">
+    <view class="container">
+        <view class="user-info-wrap">
+            <view class="user-info" wx:if="{{ userinfo.avatarUrl }}">
+                <image class="user-icon" src="{{userinfo.avatarUrl}}" />
+                <view class="username">{{userinfo.nickName}}</view>
+            </view>
+            <!-- 用户没登陆显示 -->
+            <navigator url='/pages/login/index' class="user-info" wx:else>
+                <image class="user-icon" src='../../icons/defaultAvatar.jpeg' />
+                <view class="username">游客</view>
+            </navigator>
+        </view>
+        <view class="user-main">
+            <view>
+                <navigator url="/pages/order/index" class="user-order d-flex">
+                    <view>我的订单</view>
+                    <view class="iconfont icon-next"></view>
+                    <!-- <button bindtap="goToOrderPage"></button> -->
+                </navigator>
+            </view>
+            <view>
+                <navigator url="/pages/review_list/index" class="user-order d-flex">
+                    <view>我的评论</view>
+                    <view class="iconfont icon-next"></view>
+                    <!-- <button bindtap="goToOrderPage"></button> -->
+                </navigator>
+            </view>
+            <view>
+                <navigator url="/pages/my_setting/index" class="user-order d-flex">
+                    <view>我的设置</view>
+                    <view class="iconfont icon-next"></view>
+                    <!-- <button bindtap="goToOrderPage"></button> -->
+                </navigator>
+            </view>
+            <view class="app-setting d-flex">
+                <view>系统设置</view>
+                <view class="iconfont icon-next"></view>
+                <button bindtap="handleOpenSetting"></button>
+            </view>
+            <view class="app-contact d-flex">
+                <view>联系客服</view>
+                <view class="iconfont icon-next"></view>
+                <button open-type="contact"></button>
+            </view>
+            <view class="user-design d-flex" bindtap='handletap'>
+                <view>关于毕设</view>
+                <view class="iconfont icon-next"></view>
+            </view>
+            <view class="user-design d-flex">
+                <button type='warn' disabled='{{!token}}' class='logout-btn' bindtap='handleLogout'>注销</button>
+            </view>
+        </view>
+    </view>
+</view>

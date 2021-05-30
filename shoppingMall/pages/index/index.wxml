@@ -1,0 +1,58 @@
+<view class="emall_index">
+  <SearchInput></SearchInput>
+  <!-- 轮播图开始 -->
+  <view class="index_swiper">
+    <swiper autoplay indicator-dots circular>
+      <swiper-item wx:for='{{swiperList}}' wx:key="_id">
+        <navigator url="/pages/goods_detail/index?productId={{item.product}}">
+          <image src="{{item.img}}" mode='widthFix' alt="" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="index-product-list">
+    <view class="product-list">
+      <view class="product-title">//商城物品//</view>
+      <view class="product-group">
+        <view class="product-list-item" wx:for="{{products}}" wx:for-item='item' wx:key='_id'>
+          <view class="product-img">
+            <navigator url="/pages/goods_detail/index?productId={{item._id}}">
+              <image src="{{item.image}}" />
+            </navigator>
+          </view>
+          <view class="product-name">{{item.name}}</view>
+          <view class="product-price">
+            <view class="left">
+              <icon class="iconfont icon-renmingbi"></icon>
+              {{item.price}}
+            </view>
+            <!-- 添加商品 -->
+            <icon class="iconfont icon-plus" data-id="{{item._id}}" bindtap='addProduct'></icon>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="product-list" wx:for='{{recommendedation}}' wx:for-item='item1' wx:key='_id'>
+      <view class="product-title">//{{item1.name}}//</view>
+      <view class="product-group">
+        <view class="product-list-item" wx:for="{{item1.items}}" wx:for-item='item2' wx:key='_id'>
+          <view class="product-img">
+            <navigator url="/pages/goods_detail/index?productId={{item2.productId._id}}">
+              <image src="{{item2.productId.image}}" />
+            </navigator>
+          </view>
+          <view class="product-name">{{item2.productId.name}}</view>
+          <view class="product-price">
+            <view class="left">
+              <icon class="iconfont icon-renmingbi"></icon>
+              {{item2.productId.price}}
+            </view>
+            <!-- 添加商品 -->
+            <icon class="iconfont icon-plus" data-id="{{item2.productId._id}}" bindtap='addProduct'></icon>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

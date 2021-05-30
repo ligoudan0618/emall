@@ -1,0 +1,21 @@
+<view class="review-content">
+    <view class="review-wrap" wx:for='{{reviewsList}}' wx:key='_id'>
+        <navigator class="nav-img" url="/pages/goods_detail/index?productId={{item.product._id}}">
+            <image src="{{item.product.image}}" mode="" />
+        </navigator>
+        <view class="product-info-wrap">
+            <view class="product-info">{{item.product.name}}</view>
+            <view>
+                评论：
+            </view>
+
+            <view class="product-review" bindtap='showReview' data-review="{{item.description}}">{{item.description}}
+            </view>
+        </view>
+        <navigator class="add-review"
+            url="/pages/review_submit/index?productId={{item.product._id}}&isReview=true&reviewId={{item._id}}"
+            hover-class="navigator-hover" open-type="navigate">
+            去追评
+        </navigator>
+    </view>
+</view>

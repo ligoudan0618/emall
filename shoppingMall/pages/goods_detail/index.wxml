@@ -1,0 +1,61 @@
+<view class="detail-img">
+    <image class="" src="{{product.image}}" mode="widthFix" data-url='{{product.image}}' bindtap="handlePreviewImage" />
+</view>
+<view class="product">
+    <view class="product-name">{{product.name}}</view>
+    <view class="product-origin">CHINA</view>
+
+    <view class="product-price">
+        <text class="iconfont icon-renmingbi"></text>{{product.price}}
+    </view>
+</view>
+
+<view class="product-explain">
+    <view class="explain-card">
+        <view class="explain-header">
+            <view><text class="iconfont icon-gou"></text>7天免费退换</view>
+            <view><text class="iconfont icon-gou"></text>24小时内发货并赠送运费险</view>
+        </view>
+        <view class="explain-body">
+            <view>已买评价</view>
+            <view class="review">
+                <!-- {{999}} -->
+                <navigator url='/pages/review/index?productId={{product._id}}'><text class="iconfont icon-next"></text>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="product-info">
+    <view class="product-info-title">图文详情</view>
+    <view class="product-info-content">
+        <!-- 富文本 -->
+        <rich-text class="content" nodes="{{product.detail}}"></rich-text>
+    </view>
+</view>
+
+<view class="btm-tool">
+    <!-- <view class="tool-item">
+        <view class="iconfont icon-kefu"></view>
+        <view>客服</view>
+        <button open-type="contact"></button>
+    </view>
+    <view class="tool-item">
+        <view class="iconfont icon-yixianshi-"></view>
+        <view>分享</view>
+        <button open-type="share"></button>
+    </view>
+    <navigator open-type="switchTab" url="/pages/cart/index" class="tool-item">
+        <view class="iconfont icon-gouwuche"></view>
+        <view>购物车</view>
+    </navigator> -->
+    <view class="tool-item btn-cart" bindtap="handleCartAdd">
+        加入购物车
+    </view>
+    <view class="tool-item btn-buy">
+        <navigator open-type="switchTab" url="/pages/cart/index">
+            立即购买
+        </navigator>
+    </view>
+</view>

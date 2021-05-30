@@ -1,0 +1,30 @@
+<view class="product-info-wrap">
+    <view class="img">
+        <image class="" src="{{ product.image }}" mode="widthFix" />
+    </view>
+    <view class="product-info">
+        <view class="product-name">{{product.name}}</view>
+        <view class="product-price">￥{{product.price}}</view>
+    </view>
+</view>
+
+<view class="review-wrap">
+    <view class="review-count">{{reviewsLen}}条评论</view>
+    <view class="review-list">
+        <view class="review-list-item" wx:for='{{reviews}}' wx:key='_id' wx:for-item='item'>
+            <view class="user-info">
+                <image src="{{item.avatarUrl}}" mode="widthFix" />
+                <view class="user-name">{{item.nickName}}</view>
+            </view>
+            <view class="user-review">
+                <view class="review">{{item.description}}</view>
+                <text class="add-review" decode="{{true}}">&nbsp;&nbsp;追加评论：{{item.addReview[0]}}</text>
+                <view class="img-wrap">
+                    <image src="{{item2.url}}" data-images="{{item.images}}" data-url="{{item2.url}}"
+                        wx:for='{{item.images}}' wx:for-item='item2' wx:key='url' bindtap='handlePreviewImage' />
+                </view>
+            </view>
+            <view class="review-time">{{item.updatedAt}}</view>
+        </view>
+    </view>
+</view>

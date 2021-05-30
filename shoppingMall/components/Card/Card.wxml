@@ -1,0 +1,10 @@
+<view class="card">
+  <!-- 卡片头 -->
+  <view class="card-header">
+    <view class="title">{{title}}</view>
+  </view>
+  <!-- 卡片主体内容 -->
+  <view class="card-body">
+    <slot></slot>
+  </view>
+</view>

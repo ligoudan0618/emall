@@ -1,0 +1,138 @@
+page {
+  padding-bottom: 90rpx;
+}
+.revice-address-row {
+  .address-btn {
+  }
+  .user-info-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #eee;
+    padding: 20rpx;
+    .user-info {
+    }
+    .user-phone {
+    }
+  }
+}
+
+.cart-content {
+  padding: 20rpx;
+  .cart-main {
+    .cart-item {
+      display: flex;
+      padding: 20rpx;
+      margin-top: 10rpx;
+      border: 1rpx solid #eee;
+      border-radius: 15rpx;
+      background-color: #fff;
+      box-shadow: 2rpx 2rpx 10rpx rgba(0, 0, 0, 0.1);
+      .cart-chk-wrap {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        checkbox {
+          .wx-checkbox-input {
+            width: 40rpx;
+            height: 40rpx;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .cart_img_wrap {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        image {
+          width: 80%;
+        }
+      }
+
+      .cart-info-wrap {
+        flex: 4;
+        .product-name {
+        }
+        .product-price-wrap {
+          display: flex;
+          justify-content: space-between;
+          .product-price {
+            display: flex;
+            align-items: center;
+            margin-top: 10rpx;
+
+            .icon-renmingbi1 {
+              font-size: 24rpx !important;
+            }
+          }
+          .cart-num-tool {
+            display: flex;
+            margin-top: 25rpx;
+
+            .num-edit {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 45rpx;
+              height: 45rpx;
+              background: rgb(224, 224, 147);
+              border-radius: 50%;
+            }
+            .product-num {
+              margin: 0 10rpx;
+              //   line-height: 22rpx;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-tool {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 15rpx;
+  border-top: 2rpx solid #eee;
+  background-color: #fff;
+  .all-check-wrap {
+    flex: 2;
+    checkbox {
+      .wx-checkbox-input {
+        width: 40rpx;
+        height: 40rpx;
+        border-radius: 50%;
+      }
+    }
+  }
+  .total-price-wrap {
+    flex: 5;
+    .total-price {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20rpx;
+      color: #666;
+      text {
+        color: #000;
+      }
+    }
+  }
+
+  .order-pay-wrap {
+    flex: 3;
+    height: 100%;
+    background: rgb(235, 235, 127);
+    color: #000;
+    font-size: 32rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

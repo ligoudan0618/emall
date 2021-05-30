@@ -1,0 +1,20 @@
+.order-main {
+  padding: 20rpx;
+}
+.order-main .order-item {
+  margin-top: 10rpx;
+  padding: 10rpx;
+  border: 4rpx solid #eee;
+  border-radius: 15rpx;
+  background-color: white;
+  box-shadow: 2rpx 2rpx 2rpx rgba(0, 0, 0, 0.2);
+}
+.order-main .order-item navigator {
+  display: flex;
+  justify-content: space-between;
+}
+.order-main .order-item .d-flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 0;
+}

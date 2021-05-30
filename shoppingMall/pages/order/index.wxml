@@ -1,0 +1,22 @@
+<Tabs tabs='{{tabs}}' bindtabsItemChange='handleTabsItemChange'>
+  <view class="order-main">
+    <view class="order-item" wx:for="{{orders}}" wx:key='_id'>
+      <navigator url="/pages/order_detail/index?orderNum={{item.orderNum}}">
+        <text>...</text>
+        <text class="iconfont icon-next"></text>
+      </navigator>
+      <view class="order-num-row d-flex">
+        <view class="order-num-text">订单编号</view>
+        <view class="order-num-value">{{item.orderNum}}</view>
+      </view>
+      <view class="order-price-row d-flex">
+        <view class="order-price-text">订单价格</view>
+        <view class="order-price-value">￥{{item.orderPrice}}</view>
+      </view>
+      <view class="order-time-row d-flex">
+        <view class="order-time-text">订单日期</view>
+        <view class="order-time-value">{{item.createTime}}</view>
+      </view>
+    </view>
+  </view>
+</Tabs>

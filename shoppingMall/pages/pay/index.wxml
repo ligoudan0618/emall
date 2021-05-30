@@ -1,0 +1,55 @@
+<!-- 收货地址 -->
+<view class="revice-address-row">
+  <!-- 收货地址存在显示详细信息 -->
+  <view class="user-info-row">
+    <view class="user-info">
+      <view>{{address.userName}}</view>
+      <view>{{address.all}}</view>
+    </view>
+    <view class="user-phone">{{address.telNumber}}</view>
+  </view>
+</view>
+
+<!-- 购物车内容 -->
+<view class="cart-content">
+  <view class="cart-main">
+    <block wx:if='{{cart.length !== 0}}'>
+      <view class="cart-item" wx:for='{{cart}}' wx:key='_id'>
+        <!-- 商品图片 -->
+        <navigator class="cart_img_wrap" url="/pages/goods_detail/index?productId={{item._id}}">
+          <image mode="widthFix" src="{{item.image}}" />
+        </navigator>
+        <!-- 商品信息 -->
+        <view class="cart-info-wrap">
+          <view class="product-name">{{item.name}}</view>
+          <view class="product-price-wrap">
+            <view class="product-price"><text class="iconfont icon-renmingbi1"></text>{{item.price}}</view>
+            <view class="cart-num-tool">
+              <view class="product-num">X{{item.num}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <blcok wx:else style="text-align:center">
+      <image mode="widthFix"
+        src=https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=769107006,295802047&fm=26&gp=0.jpg">
+      </image>
+      <view>你的购物车空空如也</view>
+    </blcok>
+  </view>
+</view>
+
+<!-- 底部工具栏 -->
+<view class="footer-tool">
+  <!-- 总价 -->
+  <view class="total-price-wrap">
+    <view class="total-price">
+      总价:<text>￥{{totalPrice}}</text>
+    </view>
+  </view>
+  <!-- 结算 -->
+  <view class="order-pay-wrap" bindtap="handlePay">
+    结算({{totalNum}})
+  </view>
+</view>

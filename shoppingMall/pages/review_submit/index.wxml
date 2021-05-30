@@ -1,0 +1,21 @@
+<view class="product-info-wrap">
+    <image class="" src="{{product.image}}" mode="widthFix" />
+    <view class="product-info">
+        <view class="product-name">{{product.name}}</view>
+        <view class="product-description">{{product.description}}</view>
+    </view>
+</view>
+
+<view class="review-form">
+    <form bindsubmit='reviewForm'>
+        <!-- <input type='textarea' name='username' placeholder="请输入用户名"></input> -->
+        <textarea name="reviewValue" id="" cols="30" rows="10" placeholder="请输入评论内容"></textarea>
+        <mp-uploader wx:if='{{!isReview}}' bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}"
+            upload="{{uplaodFile}}" files="{{files}}" max-count="5" title="请选择图片" tips="您最多可以选择5张"
+            binddelete='deleteFile'></mp-uploader>
+        <view class='review-button'>
+            <button size='mini' formType="submit" type='primary'>评论</button>
+            <button size='mini' formType="reset" type='primary'>重置</button>
+        </view>
+    </form>
+</view>

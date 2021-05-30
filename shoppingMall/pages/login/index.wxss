@@ -1,0 +1,7 @@
+.login-form .login-btn {
+  display: flex;
+  justify-content: center;
+}
+.login-form .login-btn button {
+  margin-right: 10rpx;
+}

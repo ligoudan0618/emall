@@ -1,0 +1,51 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<!-- 登录模块显示 -->
+<view class="login-form" wx:if='{{isLogin}}'>
+    <mp-form id="loginForm" rules="{{loginRules}}" models="{{formData}}">
+        <mp-cells title="登录" footer="如果需要修改密码,请点击忘记密码按钮">
+            <mp-cell prop="userName" title="用户名" ext-class="">
+                <input bindinput="formInputChange" data-field="userName" class="weui-input" placeholder="请输入用户名" />
+            </mp-cell>
+            <mp-cell prop="password" title="密码" ext-class="">
+                <input password bindinput="formInputChange" data-field="password" class="weui-input"
+                    placeholder="请输入密码" />
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap="toLogin">登录</button>
+        <button class="weui-btn" type="primary" bindtap="toRegister">去注册</button>
+        <button class="weui-btn" type="primary" bindtap="changePassword">忘记密码</button>
+        <button class="weui-btn" type="primary" plain bindtap="loginByWeChat">微信登录</button>
+    </view>
+</view>
+<!-- 注册模块显示 -->
+<view class="register-form-wrap" wx:else>
+    <mp-form id="registerForm" rules="{{rules}}" models="{{formData}}">
+        <mp-cells title="注册" footer="微信号只能绑定一个用户,无法重复绑定,用户名也是唯一标识">
+            <mp-cell prop="userName" title="用户名" ext-class="">
+                <input bindinput="formInputChange" data-field="userName" class="weui-input" placeholder="请输入用户名" />
+            </mp-cell>
+            <mp-cell prop="password" title="密码" ext-class="">
+                <input password bindinput="formInputChange" data-field="password" class="weui-input"
+                    placeholder="请输入密码" />
+            </mp-cell>
+            <mp-cell prop="password2" title="确认密码" ext-class="">
+                <input password bindinput="formInputChange" data-field="password2" class="weui-input"
+                    placeholder="请确认密码" />
+            </mp-cell>
+            <mp-cell prop="mobile" title="手机号" ext-class="">
+                <input bindinput="formInputChange" data-field="mobile" class="weui-input" placeholder="请输入手机号" />
+                <!-- <view slot="footer" class="weui-vcode-btn">获取验证码</view> -->
+            </mp-cell>
+            <mp-cell prop="email" title="邮箱地址" ext-class="">
+                <input bindinput="formInputChange" data-field="email" class="weui-input" placeholder="请输入邮箱地址" />
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap="checkRegisterForm">校验</button>
+        <button class="weui-btn" type="primary" disabled='{{isCheckFail}}' bindtap="submitRegisterForm">注册</button>
+        <button class="weui-btn" type="primary" bindtap="toLoginPage">已注册去登陆</button>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+{
+  "name": "shoppingMall",
+  "version": "1.0.0",
+  "description": "1.order 订单\r       2.product 产品\r       3.review 评论\r       4.trolley 购物车\r ## 二、后台数据库集合\r       1.category 分类\r       2.product 产品\r       3.review 评论\r       4.user 用户",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.10.4"
+  }
+}
